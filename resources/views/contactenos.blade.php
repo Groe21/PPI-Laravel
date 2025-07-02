@@ -6,22 +6,22 @@
     <title>Portuaria - Gestión y Servicios</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="{{ asset('css/contactos.css') }}" rel="stylesheet">
 </head>
 <body>
     <header class="py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">
-                <img src="../../static/img/icons/logo_espomalia.png" alt="Logo Portuaria" class="img-fluid">
+                <img src="{{ asset('static/img/icons/logo_espomalia.png') }}" alt="Logo Portuaria" class="img-fluid">
             </div>
             
             <!-- Menú principal para pantallas grandes -->
             <nav class="d-none d-md-flex">
-                <a href="../../index.html" class="text-white text-decoration-none mx-3">Inicio</a>
-                <a href="../../paginas/nuestros_servicios/nuestro_servicios.html" class="text-white text-decoration-none mx-3">Nuestros Servicios</a>
-                <a href="../../paginas/sobre_nosotros/sobre_nosotros.html" class="text-white text-decoration-none mx-3">Sobre Nosotros</a>
-                <a href="../../paginas/organigrama/organigrama.html" class="text-white text-decoration-none mx-3">Organigrama</a>
-                <a href="../../paginas/contactenos/contactenos.html" class="text-white text-decoration-none mx-3">Contáctanos</a>
+                <a href="{{ url('/') }}" class="text-white text-decoration-none mx-3">Inicio</a>
+                <a href="{{ url('/nuestros-servicios') }}" class="text-white text-decoration-none mx-3">Nuestros Servicios</a>
+                <a href="{{ url('/sobre-nosotros') }}" class="text-white text-decoration-none mx-3">Sobre Nosotros</a>
+                <a href="{{ url('/organigrama') }}" class="text-white text-decoration-none mx-3">Organigrama</a>
+                <a href="{{ url('/contactenos') }}" class="text-white text-decoration-none mx-3">Contáctanos</a>
             </nav>
             
             <button class="btn btn-primary d-none d-md-block" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
@@ -35,11 +35,11 @@
         <!-- Menú desplegable para móviles -->
         <div class="collapse navbar-collapse d-md-none" id="mobileMenu">
             <nav class="navbar-nav text-center">
-                <a href="../../index.html" class="nav-link">Inicio</a>
-                <a href="../../paginas/nuestros_servicios/nuestro_servicios.html" class="nav-link">Nuestros Servicios</a>
-                <a href="../../paginas/sobre_nosotros/sobre_nosotros.html" class="nav-link">Sobre Nosotros</a>
-                <a href="../../paginas/organigrama/organigrama.html" class="nav-link">Organigrama</a>
-                <a href="../../paginas/contactenos/contactenos.html" class="nav-link">Contáctanos</a>
+                <a href="{{ url('/') }}" class="nav-link">Inicio</a>
+                <a href="{{ url('/nuestros-servicios') }}" class="nav-link">Nuestros Servicios</a>
+                <a href="{{ url('/sobre-nosotros') }}" class="nav-link">Sobre Nosotros</a>
+                <a href="{{ url('/organigrama') }}" class="nav-link">Organigrama</a>
+                <a href="{{ url('/contactenos') }}" class="nav-link">Contáctanos</a>
                 <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
             </nav>
         </div>
